@@ -1,6 +1,12 @@
-<h2>{{taskTitle}}</h2>
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">New Task</label>
+    <input type="text" class="form-control" id="task" placeholder="Task" #task (keyup.enter)="addTasks(task.value)">
+  </div>
+</form>
+<h3>{{taskTitle}}</h3>
   <ul>
       <li *ngFor="let task of tasks">
-        {{ task }}
+        {{task }}
       </li>
   </ul>
